@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ISO Suite · Test 4 · ISO/IEC TS 27008 Evaluación de controles</title>
+<style>
+:root{--bg:#0b1020;--panel:#141b34;--panel2:#1b2447;--text:#eef2ff;--muted:#b9c2e6;--ok:#1db954;--bad:#ff5d73;--accent:#6ea8fe;--accent2:#9b7bff;--border:#2a3567}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#0a0f1f,#101733 45%,#0d1430);color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,rgba(110,168,254,.18),rgba(155,123,255,.16));border:1px solid var(--border);border-radius:22px;padding:24px 24px 18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 6px}.badge{background:#0f1733;border:1px solid var(--border);color:var(--muted);padding:8px 12px;border-radius:999px;font-size:13px}
+h1{margin:0 0 10px;font-size:32px;line-height:1.15}p.lead{margin:0;color:var(--muted);line-height:1.6}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
+.card{background:rgba(20,27,52,.92);border:1px solid var(--border);border-radius:18px;padding:18px}.card h2,.card h3{margin-top:0}label{display:block;font-weight:700;margin:10px 0 6px}
+input[type=text]{width:100%;padding:14px;border-radius:12px;border:1px solid var(--border);background:#0d1530;color:var(--text);font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+button{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff}.btn-secondary{background:#202c57;color:var(--text);border:1px solid var(--border)}
+.notice{font-size:13px;color:var(--muted);line-height:1.5;background:#0d1530;border:1px dashed var(--border);padding:12px;border-radius:12px}.meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.quiz-shell{display:none;margin-top:22px}.question-card{background:rgba(20,27,52,.96);border:1px solid var(--border);border-radius:18px;padding:18px;margin-bottom:16px}.q-index{font-size:13px;color:var(--muted)}.q-text{font-size:20px;font-weight:800;line-height:1.4;margin:8px 0 14px}
+.options{display:grid;gap:10px}.option{border:1px solid var(--border);background:#0f1733;border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start;cursor:pointer;transition:.15s}.option:hover{transform:translateY(-1px);border-color:#4b62b0}.option input{margin-top:4px}
+.option.correct{border-color:rgba(29,185,84,.7);background:rgba(29,185,84,.12)}.option.wrong{border-color:rgba(255,93,115,.7);background:rgba(255,93,115,.12)}
+.feedback{display:none;margin-top:14px;padding:14px;border-radius:14px;border:1px solid var(--border);background:#111936}.feedback.ok{border-color:rgba(29,185,84,.45)}.feedback.bad{border-color:rgba(255,93,115,.45)}.feedback h4{margin:0 0 8px}
+.quote{font-style:italic;color:#d9e2ff;background:#0c132b;border-left:4px solid var(--accent);padding:10px 12px;border-radius:8px;margin:10px 0}.muted{color:var(--muted)}
+.scorebar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.metric{background:#0f1733;border:1px solid var(--border);border-radius:16px;padding:14px}.metric .value{font-size:28px;font-weight:900}.metric .label{color:var(--muted);font-size:13px}
+.report{display:none;margin-top:26px}.report table{width:100%;border-collapse:collapse;font-size:14px}.report th,.report td{border:1px solid var(--border);padding:10px;vertical-align:top}.report th{background:#121b39;text-align:left}
+.pill{display:inline-block;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}.pill.ok{background:rgba(29,185,84,.16);color:#93ffc0;border:1px solid rgba(29,185,84,.35)}.pill.bad{background:rgba(255,93,115,.14);color:#ffb2bc;border:1px solid rgba(255,93,115,.35)}
+.footer-note{margin-top:16px;color:var(--muted);font-size:13px;line-height:1.5}@media print{body{background:#fff;color:#000}.hero,.card,.question-card,.metric{box-shadow:none;background:#fff;color:#000;border:1px solid #bbb}.btn-primary,.btn-secondary,.actions,.notice{display:none!important}.report{display:block!important}.quiz-shell{display:none!important}}@media(max-width:860px){.grid{grid-template-columns:1fr}.scorebar{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<div class="badges"><span class="badge">ISO/IEC TS 27008:2019</span><span class="badge">Nivel experto</span><span class="badge">7 preguntas</span></div>
+<h1>ISO Suite · Test 4 · ISO/IEC TS 27008 Evaluación de controles</h1>
+<p class="lead">Práctica experta sobre evidence, sampling, observation, interviews, examination, testing y reporting.</p>
+<div class="grid">
+<div class="card">
+<h2>Identificación del intento</h2>
+<label for="username">Usuario visible en el informe</label>
+<input id="username" type="text" maxlength="80" placeholder="Ej.: Ana López / Invitado 01" />
+<div class="actions">
+<button class="btn-primary" onclick="startQuiz()">Comenzar test</button>
+<button class="btn-secondary" onclick="window.print()">Imprimir informe</button>
+</div>
+<p class="footer-note">Esta página no almacena datos en base de datos, cookies ni localStorage. Todo se procesa en tu navegador para practicar y evidenciar el intento de conocimiento.</p>
+</div>
+<div class="card">
+<h3>Datos visibles</h3>
+<div class="meta"><div><strong>Fecha del intento:</strong> <span id="today"></span></div><div><strong>Preguntas:</strong> <span id="qCount"></span></div><div><strong>Nivel:</strong> Experto</div></div>
+<div class="notice" style="margin-top:12px"><strong>Diseño didáctico:</strong> cada pregunta muestra por qué la respuesta elegida es correcta o incorrecta y añade un apoyo textual breve de la norma correspondiente para reforzar la memorización.</div>
+</div>
+</div>
+</section>
+<section id="quiz" class="quiz-shell"></section>
+<section id="report" class="report card">
+<h2>Informe del intento</h2>
+<div class="scorebar">
+<div class="metric"><div class="value" id="scorePct">0%</div><div class="label">Puntuación</div></div>
+<div class="metric"><div class="value" id="scoreHits">0</div><div class="label">Aciertos</div></div>
+<div class="metric"><div class="value" id="scoreFails">0</div><div class="label">Errores</div></div>
+<div class="metric"><div class="value" id="reportUser">—</div><div class="label">Usuario</div></div>
+</div>
+<p class="muted"><strong>Fecha visible:</strong> <span id="reportDate"></span></p>
+<table><thead><tr><th>#</th><th>Pregunta</th><th>Respuesta del usuario</th><th>Respuesta correcta</th><th>Resultado</th></tr></thead><tbody id="reportBody"></tbody></table>
+<p class="footer-note">Sugerencia de estudio: repite el test concentrándote primero en las preguntas erradas y en el verbo normativo decisivo del extracto mostrado. Puedes reutilizar esta página tantas veces como quieras.</p>
+</section>
+</div>
+<script>
+const quizData = {"title": "ISO Suite · Test 4 · ISO/IEC TS 27008 Evaluación de controles", "questions": [{"q": "El propósito de la evidencia recogida en una revisión de controles es, principalmente:", "options": ["Decorar los papeles de trabajo del auditor.", "Aportar base fáctica suficiente para sustentar todos los hallazgos de la revisión.", "Sustituir el criterio del auditor.", "Proteger a la organización de toda no conformidad futura."], "correct": 1, "clause": "27008 evidence", "quote": "there is sufficient review evidence to provide a factual basis supporting all of the review findings", "why_correct": "Es correcta porque la norma insiste en la suficiencia y base factual de la evidencia para sustentar hallazgos.", "why_wrong": ["Es incorrecta porque la evidencia tiene una función probatoria, no decorativa.", "", "Es incorrecta porque la evidencia informa el juicio profesional, no lo reemplaza.", "Es incorrecta porque ninguna revisión elimina por sí sola riesgos futuros."]}, {"q": "Sobre la vigencia y validez de la evidencia, ISO/IEC TS 27008 indica que debe ser:", "options": ["Antigua para demostrar historial.", "Apropiadamente reciente y válida respecto del sistema y controles en alcance.", "Solo documental, nunca observacional.", "Siempre exhaustiva sin usar muestreo."], "correct": 1, "clause": "27008 evidence validity", "quote": "the evidence is appropriately recent and valid with regards the system and controls in scope", "why_correct": "Es correcta porque la adecuación temporal y al alcance es esencial para que la evidencia sea útil.", "why_wrong": ["Es incorrecta porque una evidencia obsoleta puede no reflejar la situación real.", "", "Es incorrecta porque la evidencia puede obtenerse por varios métodos, no solo documentos.", "Es incorrecta porque la norma contempla técnicas de muestreo."]}, {"q": "El muestreo en la evaluación de controles puede incluir:", "options": ["Solo selección aleatoria simple.", "Selección aleatoria, estratificada y otras técnicas estadísticas más sofisticadas.", "Únicamente revisión exhaustiva.", "Solo muestreo decidido por el auditado."], "correct": 1, "clause": "27008 sampling", "quote": "Sampling practices vary... they can include random selection, stratified selection and other more sophisticated statistical sampling techniques", "why_correct": "Es correcta porque la norma admite diferentes enfoques de muestreo según el objetivo y el contexto.", "why_wrong": ["Es incorrecta porque restringe indebidamente las técnicas previstas.", "", "Es incorrecta porque la revisión exhaustiva no siempre es viable ni requerida.", "Es incorrecta porque el criterio de muestreo no queda solo en manos del auditado."]}, {"q": "La observación como método de revisión permite al auditor:", "options": ["Recibir evidencia inmediata de cómo se realizan actividades específicas con mínima interacción.", "Sustituir todas las entrevistas.", "Evitar examinar documentación.", "Emitir conclusiones sin contrastar otras fuentes."], "correct": 0, "clause": "27008 observation", "quote": "can allow the auditor to receive immediate evidence on how specific activities are performed", "why_correct": "Es correcta porque la observación aporta evidencia directa sobre la ejecución real de actividades.", "why_wrong": ["", "Es incorrecta porque la observación complementa, no elimina, otros métodos.", "Es incorrecta porque la revisión suele combinar fuentes y técnicas.", "Es incorrecta porque las conclusiones requieren evidencia suficiente y contrastada."]}, {"q": "Examination techniques son, conforme a la norma:", "options": ["Técnicas para castigar incumplimientos.", "Métodos de revisión que facilitan la comprensión mediante checks, inspecciones, observaciones, estudios o análisis de objetos de revisión.", "Sinónimos exactos de red teaming.", "Un mecanismo exclusivo para cloud."], "correct": 1, "clause": "27008 examination", "quote": "Examination techniques are a form of review method that facilitates understanding... through checks, inspections, reviews, observations, studies, or analysis", "why_correct": "Es correcta porque describe examination como un método estructurado de entendimiento y verificación.", "why_wrong": ["Es incorrecta porque la técnica busca entender y verificar, no sancionar.", "", "Es incorrecta porque red teaming sería un tipo específico de prueba, no el total de examination.", "Es incorrecta porque examination no es exclusivo de cloud."]}, {"q": "Testing and validation techniques consisten en:", "options": ["Ejercitar uno o más objetos de revisión bajo condiciones especificadas para comparar comportamiento real y esperado.", "Revisar exclusivamente documentación histórica.", "Clasificar hallazgos en S, P y O sin pruebas.", "Sustituir toda observación de procesos."], "correct": 0, "clause": "27008 testing", "quote": "Testing and validation techniques are a form of review method that exercises one or more review objects under specified conditions to compare actual with expected behaviour", "why_correct": "Es correcta porque esa es la definición esencial del procedimiento de prueba y validación.", "why_wrong": ["", "Es incorrecta porque eso sería más cercano a examination documental.", "Es incorrecta porque la clasificación de hallazgos es posterior a la revisión.", "Es incorrecta porque las pruebas no anulan la utilidad de observar procesos."]}, {"q": "El formato de reporting de hallazgos previsto por ISO/IEC TS 27008 aporta visibilidad mediante etiquetas:", "options": ["Alta, Media y Baja.", "Satisfied (S), Partly satisfied (P) y Other than satisfied / Not satisfied (O).", "Correcto o incorrecto únicamente.", "Maduro, inmaduro y crítico."], "correct": 1, "clause": "27008 reporting", "quote": "using the tags satisfied (S), partly satisfied (P) and other than satisfied (O)", "why_correct": "Es correcta porque reproduce el esquema de categorización señalado por la norma técnica.", "why_wrong": ["Es incorrecta porque esas etiquetas no son las del estándar.", "", "Es incorrecta porque la norma usa un esquema más matizado.", "Es incorrecta porque esa taxonomía no es la citada por 27008."]}]};
+const state = { answers: new Array(quizData.questions.length).fill(null) };
+function fmtDate(){ const d=new Date(); return d.toLocaleString('es-ES',{dateStyle:'full',timeStyle:'short'}); }
+document.getElementById('today').textContent=fmtDate(); document.getElementById('qCount').textContent=quizData.questions.length;
+function esc(s){ return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;'); }
+function startQuiz(){ renderQuiz(); document.getElementById('quiz').style.display='block'; window.scrollTo({top:document.getElementById('quiz').offsetTop-10,behavior:'smooth'}); }
+function renderQuiz(){
+ const shell=document.getElementById('quiz');
+ shell.innerHTML=quizData.questions.map((q,idx)=>`
+  <article class="question-card" id="q-${idx}">
+   <div class="q-index">Pregunta ${idx+1} de ${quizData.questions.length} · ${esc(q.clause)}</div>
+   <div class="q-text">${esc(q.q)}</div>
+   <div class="options">${q.options.map((opt,optIdx)=>`
+    <label class="option" id="q-${idx}-opt-${optIdx}"><input type="radio" name="question-${idx}" onclick="answerQuestion(${idx},${optIdx})" ${state.answers[idx]===optIdx?'checked':''} /><span><strong>${String.fromCharCode(65+optIdx)}.</strong> ${esc(opt)}</span></label>`).join('')}</div>
+   <div class="feedback" id="feedback-${idx}"></div>
+  </article>`).join('') + `<div class="actions"><button class="btn-primary" onclick="finishQuiz()">Finalizar y calcular puntuación</button><button class="btn-secondary" onclick="resetQuiz()">Reiniciar este test</button></div>`;
+}
+function answerQuestion(idx,selected){
+ state.answers[idx]=selected; const q=quizData.questions[idx];
+ q.options.forEach((_,optIdx)=>{ const el=document.getElementById(`q-${idx}-opt-${optIdx}`); el.classList.remove('correct','wrong'); if(optIdx===q.correct) el.classList.add('correct'); if(optIdx===selected && selected!==q.correct) el.classList.add('wrong'); });
+ const ok=selected===q.correct; const fb=document.getElementById(`feedback-${idx}`); fb.className='feedback '+(ok?'ok':'bad');
+ const wrongReason = q.why_wrong[selected] || 'Tu opción no coincide con el sentido del requisito o guía aplicable.';
+ fb.innerHTML=`<h4>${ok?'✅ Respuesta correcta':'❌ Respuesta incorrecta'}</h4><p><strong>Tu elección:</strong> ${esc(q.options[selected])}</p>${ok?`<p><strong>Por qué es correcta:</strong> ${esc(q.why_correct)}</p>`:`<p><strong>Por qué tu respuesta es incorrecta:</strong> ${esc(wrongReason)}</p><p><strong>Por qué la correcta es la correcta:</strong> ${esc(q.why_correct)}</p>`}<div class="quote"><strong>Apoyo textual breve:</strong> “${esc(q.quote)}”.</div><p class="muted"><strong>Cláusula orientativa:</strong> ${esc(q.clause)}</p>`;
+ fb.style.display='block';
+}
+function finishQuiz(){
+ const pending=state.answers.map((v,i)=>v===null?i:null).filter(v=>v!==null); if(pending.length){ alert('Debes contestar todas las preguntas. Pendientes: '+pending.map(i=>i+1).join(', ')); document.getElementById(`q-${pending[0]}`).scrollIntoView({behavior:'smooth',block:'center'}); return; }
+ const user=document.getElementById('username').value.trim() || 'Invitado'; const total=quizData.questions.length; const hits=quizData.questions.filter((q,i)=>q.correct===state.answers[i]).length; const fails=total-hits; const pct=Math.round(hits/total*100);
+ document.getElementById('scorePct').textContent=pct+'%'; document.getElementById('scoreHits').textContent=hits; document.getElementById('scoreFails').textContent=fails; document.getElementById('reportUser').textContent=user; document.getElementById('reportDate').textContent=fmtDate();
+ document.getElementById('reportBody').innerHTML=quizData.questions.map((q,i)=>{ const sel=state.answers[i]; const ok=sel===q.correct; return `<tr><td>${i+1}</td><td>${esc(q.q)}<br><span class="muted">${esc(q.clause)}</span></td><td>${esc(q.options[sel])}</td><td>${esc(q.options[q.correct])}</td><td><span class="pill ${ok?'ok':'bad'}">${ok?'Correcta':'Incorrecta'}</span></td></tr>`; }).join('');
+ document.getElementById('report').style.display='block'; document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resetQuiz(){ state.answers=new Array(quizData.questions.length).fill(null); document.getElementById('report').style.display='none'; renderQuiz(); }
+</script>
+</body></html>

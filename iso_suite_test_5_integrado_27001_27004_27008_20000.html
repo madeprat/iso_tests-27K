@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ISO Suite · Test 5 · Integrado 27001 + 27004 + 27008 + 20000-2</title>
+<style>
+:root{--bg:#0b1020;--panel:#141b34;--panel2:#1b2447;--text:#eef2ff;--muted:#b9c2e6;--ok:#1db954;--bad:#ff5d73;--accent:#6ea8fe;--accent2:#9b7bff;--border:#2a3567}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#0a0f1f,#101733 45%,#0d1430);color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,rgba(110,168,254,.18),rgba(155,123,255,.16));border:1px solid var(--border);border-radius:22px;padding:24px 24px 18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 6px}.badge{background:#0f1733;border:1px solid var(--border);color:var(--muted);padding:8px 12px;border-radius:999px;font-size:13px}
+h1{margin:0 0 10px;font-size:32px;line-height:1.15}p.lead{margin:0;color:var(--muted);line-height:1.6}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
+.card{background:rgba(20,27,52,.92);border:1px solid var(--border);border-radius:18px;padding:18px}.card h2,.card h3{margin-top:0}label{display:block;font-weight:700;margin:10px 0 6px}
+input[type=text]{width:100%;padding:14px;border-radius:12px;border:1px solid var(--border);background:#0d1530;color:var(--text);font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+button{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff}.btn-secondary{background:#202c57;color:var(--text);border:1px solid var(--border)}
+.notice{font-size:13px;color:var(--muted);line-height:1.5;background:#0d1530;border:1px dashed var(--border);padding:12px;border-radius:12px}.meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.quiz-shell{display:none;margin-top:22px}.question-card{background:rgba(20,27,52,.96);border:1px solid var(--border);border-radius:18px;padding:18px;margin-bottom:16px}.q-index{font-size:13px;color:var(--muted)}.q-text{font-size:20px;font-weight:800;line-height:1.4;margin:8px 0 14px}
+.options{display:grid;gap:10px}.option{border:1px solid var(--border);background:#0f1733;border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start;cursor:pointer;transition:.15s}.option:hover{transform:translateY(-1px);border-color:#4b62b0}.option input{margin-top:4px}
+.option.correct{border-color:rgba(29,185,84,.7);background:rgba(29,185,84,.12)}.option.wrong{border-color:rgba(255,93,115,.7);background:rgba(255,93,115,.12)}
+.feedback{display:none;margin-top:14px;padding:14px;border-radius:14px;border:1px solid var(--border);background:#111936}.feedback.ok{border-color:rgba(29,185,84,.45)}.feedback.bad{border-color:rgba(255,93,115,.45)}.feedback h4{margin:0 0 8px}
+.quote{font-style:italic;color:#d9e2ff;background:#0c132b;border-left:4px solid var(--accent);padding:10px 12px;border-radius:8px;margin:10px 0}.muted{color:var(--muted)}
+.scorebar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.metric{background:#0f1733;border:1px solid var(--border);border-radius:16px;padding:14px}.metric .value{font-size:28px;font-weight:900}.metric .label{color:var(--muted);font-size:13px}
+.report{display:none;margin-top:26px}.report table{width:100%;border-collapse:collapse;font-size:14px}.report th,.report td{border:1px solid var(--border);padding:10px;vertical-align:top}.report th{background:#121b39;text-align:left}
+.pill{display:inline-block;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}.pill.ok{background:rgba(29,185,84,.16);color:#93ffc0;border:1px solid rgba(29,185,84,.35)}.pill.bad{background:rgba(255,93,115,.14);color:#ffb2bc;border:1px solid rgba(255,93,115,.35)}
+.footer-note{margin-top:16px;color:var(--muted);font-size:13px;line-height:1.5}@media print{body{background:#fff;color:#000}.hero,.card,.question-card,.metric{box-shadow:none;background:#fff;color:#000;border:1px solid #bbb}.btn-primary,.btn-secondary,.actions,.notice{display:none!important}.report{display:block!important}.quiz-shell{display:none!important}}@media(max-width:860px){.grid{grid-template-columns:1fr}.scorebar{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<div class="badges"><span class="badge">Pack integrado</span><span class="badge">Nivel experto</span><span class="badge">7 preguntas</span></div>
+<h1>ISO Suite · Test 5 · Integrado 27001 + 27004 + 27008 + 20000-2</h1>
+<p class="lead">Examen comparativo para distinguir requisitos del SGSI, medición, assessment de controles y paralelismos con gestión de servicios.</p>
+<div class="grid">
+<div class="card">
+<h2>Identificación del intento</h2>
+<label for="username">Usuario visible en el informe</label>
+<input id="username" type="text" maxlength="80" placeholder="Ej.: Ana López / Invitado 01" />
+<div class="actions">
+<button class="btn-primary" onclick="startQuiz()">Comenzar test</button>
+<button class="btn-secondary" onclick="window.print()">Imprimir informe</button>
+</div>
+<p class="footer-note">Esta página no almacena datos en base de datos, cookies ni localStorage. Todo se procesa en tu navegador para practicar y evidenciar el intento de conocimiento.</p>
+</div>
+<div class="card">
+<h3>Datos visibles</h3>
+<div class="meta"><div><strong>Fecha del intento:</strong> <span id="today"></span></div><div><strong>Preguntas:</strong> <span id="qCount"></span></div><div><strong>Nivel:</strong> Experto</div></div>
+<div class="notice" style="margin-top:12px"><strong>Diseño didáctico:</strong> cada pregunta muestra por qué la respuesta elegida es correcta o incorrecta y añade un apoyo textual breve de la norma correspondiente para reforzar la memorización.</div>
+</div>
+</div>
+</section>
+<section id="quiz" class="quiz-shell"></section>
+<section id="report" class="report card">
+<h2>Informe del intento</h2>
+<div class="scorebar">
+<div class="metric"><div class="value" id="scorePct">0%</div><div class="label">Puntuación</div></div>
+<div class="metric"><div class="value" id="scoreHits">0</div><div class="label">Aciertos</div></div>
+<div class="metric"><div class="value" id="scoreFails">0</div><div class="label">Errores</div></div>
+<div class="metric"><div class="value" id="reportUser">—</div><div class="label">Usuario</div></div>
+</div>
+<p class="muted"><strong>Fecha visible:</strong> <span id="reportDate"></span></p>
+<table><thead><tr><th>#</th><th>Pregunta</th><th>Respuesta del usuario</th><th>Respuesta correcta</th><th>Resultado</th></tr></thead><tbody id="reportBody"></tbody></table>
+<p class="footer-note">Sugerencia de estudio: repite el test concentrándote primero en las preguntas erradas y en el verbo normativo decisivo del extracto mostrado. Puedes reutilizar esta página tantas veces como quieras.</p>
+</section>
+</div>
+<script>
+const quizData = {"title": "ISO Suite · Test 5 · Integrado 27001 + 27004 + 27008 + 20000-2", "questions": [{"q": "¿Qué emparejamiento norma-función es correcto?", "options": ["ISO/IEC 27001 = guía de métricas; ISO/IEC 27004 = requisitos del SGSI; ISO/IEC TS 27008 = catálogo de controles.", "ISO/IEC 27001 = requisitos del SGSI; ISO/IEC 27004 = monitoring/measurement/analysis/evaluation; ISO/IEC TS 27008 = assessment de controles.", "ISO/IEC 27004 = anexo de ISO/IEC 27001; ISO/IEC TS 27008 = sustituto de auditoría interna.", "ISO/IEC 20000-2 = requisitos de seguridad de la información del Anexo A."], "correct": 1, "clause": "comparativo", "quote": "27001 especifica requisitos; 27004 desarrolla monitoring, measurement, analysis and evaluation; 27008 proporciona guidelines for the assessment of information security controls", "why_correct": "Es correcta porque diferencia correctamente el rol de cada documento dentro del ecosistema de gestión y evaluación.", "why_wrong": ["Es incorrecta porque intercambia funciones de las normas.", "", "Es incorrecta porque 27004 no es un anexo de 27001 y 27008 no sustituye la auditoría interna del SGSI.", "Es incorrecta porque 20000-2 trata gestión de servicios, no los controles del Anexo A de 27001."]}, {"q": "Si una organización quiere saber si su SGSI está logrando resultados y si los controles aportan datos útiles para decidir, la combinación más adecuada es:", "options": ["Solo ISO/IEC 27001, sin apoyo de otros documentos.", "ISO/IEC 27001 para requisitos del SGSI y ISO/IEC 27004 para el programa de monitorización, medición, análisis y evaluación.", "Solo ISO/IEC TS 27008.", "Solo ISO/IEC 20000-2."], "correct": 1, "clause": "27001 + 27004", "quote": "ISO/IEC 27001... 9.1 requires the organization to evaluate...; 27004 provides guidelines on monitoring, measurement, analysis and evaluation", "why_correct": "Es correcta porque 27001 exige evaluar desempeño y eficacia, y 27004 da guía detallada para hacerlo bien.", "why_wrong": ["Es incorrecta porque aunque 27001 exige, 27004 profundiza en cómo diseñar el programa de medición.", "", "Es incorrecta porque 27008 se centra en assessment de controles, no en todo el programa de medición.", "Es incorrecta porque 20000-2 pertenece al SGS de servicios, no al núcleo del SGSI."]}, {"q": "¿Qué afirmación distingue mejor medición de assessment de controles?", "options": ["No hay diferencia: ambos son sinónimos.", "27004 se centra en convertir necesidades de información en métricas y evaluación; 27008 en obtener evidencia y concluir sobre el estado de controles revisados.", "27008 sustituye todas las métricas de 27004.", "27004 solo sirve para auditorías externas."], "correct": 1, "clause": "27004 vs 27008", "quote": "measurement should always correspond to the information needs... / evidence... supporting all of the review findings", "why_correct": "Es correcta porque sitúa 27004 en la lógica de medición y 27008 en la lógica de revisión/evidencia sobre controles.", "why_wrong": ["Es incorrecta porque responden a propósitos distintos.", "", "Es incorrecta porque assessment de controles no elimina la necesidad de medir y evaluar desempeño.", "Es incorrecta porque 27004 no se limita a auditorías externas."]}, {"q": "En comparación con UNE-ISO/IEC 20000-2, un paralelismo correcto es que ambas normas enfatizan:", "options": ["La eliminación de la alta dirección del sistema de gestión.", "La mejora continua y la necesidad de que la dirección demuestre liderazgo y compromiso.", "Que el alcance no necesita documentarse.", "Que los terceros asumen la responsabilidad final del sistema."], "correct": 1, "clause": "27001 vs 20000-2", "quote": "La alta dirección debe demostrar liderazgo y compromiso / La alta dirección demuestra liderazgo y compromiso con respecto al SGS / mejora continua", "why_correct": "Es correcta porque ambos sistemas de gestión comparten estructura de alto nivel: liderazgo directivo y mejora continua.", "why_wrong": ["Es incorrecta porque ambas normas refuerzan, no eliminan, el papel de la dirección.", "", "Es incorrecta porque el alcance/documentación siguen siendo elementos críticos del sistema.", "Es incorrecta porque la responsabilidad última permanece en la organización."]}, {"q": "Si un control está bien diseñado en teoría pero falla en su ejecución diaria, la referencia más útil para distinguir ese matiz es:", "options": ["ISO/IEC TS 27008, porque permite diferenciar diseño, implementación y operación del control.", "ISO/IEC 27004, porque solo habla de dashboards.", "UNE-ISO/IEC 20000-2, porque sustituye la revisión de controles.", "Ninguna; la norma no distingue esos niveles."], "correct": 0, "clause": "27008 advanced", "quote": "designed to provide the desired control effects in theory; correctly implemented; operating as designed", "why_correct": "Es correcta porque 27008 ofrece la lente adecuada para separar debilidades de diseño, implementación y operación.", "why_wrong": ["", "Es incorrecta porque 27004 no se reduce a dashboards, pero tampoco es la referencia principal para esa distinción.", "Es incorrecta porque 20000-2 trata gestión de servicios, no assessment de controles de seguridad.", "Es incorrecta porque 27008 sí hace esa distinción."]}, {"q": "¿Cuál sería un error metodológico al construir un cuadro de mando del SGSI?", "options": ["Alinear métricas con necesidades de información y objetivos.", "Medir demasiados atributos irrelevantes solo porque están disponibles.", "Presentar resultados en formato legible para interesados.", "Usar métodos comparables y reproducibles."], "correct": 1, "clause": "27004 pitfalls", "quote": "It is impracticable, costly and counterproductive to measure too many or the wrong attributes", "why_correct": "Es correcta porque describe exactamente un anti-patrón señalado por 27004.", "why_wrong": ["Es incorrecta porque alinear métricas con necesidades es una buena práctica central.", "", "Es incorrecta porque la presentación legible mejora el valor del reporte.", "Es incorrecta porque comparabilidad y reproducibilidad fortalecen la validez."]}, {"q": "En un enfoque integrado, ¿qué secuencia tiene más sentido lógico?", "options": ["Primero clasificar hallazgos S/P/O, después definir riesgos y por último fijar objetivos.", "Definir requisitos y riesgos del SGSI (27001), diseñar seguimiento y evaluación (27004), y revisar controles con evidencia suficiente (27008).", "Comenzar por 20000-2 y omitir el SoA.", "Usar solo Anexo A y prescindir de medición y assessment."], "correct": 1, "clause": "enfoque integrado", "quote": "27001 requisitos y tratamiento de riesgos / 27004 monitoring, measurement, analysis and evaluation / 27008 review evidence and findings", "why_correct": "Es correcta porque establece una secuencia coherente: sistema y riesgos, después medición, y después revisión detallada de controles.", "why_wrong": ["Es incorrecta porque la clasificación de hallazgos no puede anteceder lógicamente al diseño del sistema y sus riesgos.", "", "Es incorrecta porque omitir el SoA contradice 27001 y 20000-2 no sustituye el SGSI.", "Es incorrecta porque un enfoque maduro necesita requisitos, medición y revisión, no solo catálogo de controles."]}]};
+const state = { answers: new Array(quizData.questions.length).fill(null) };
+function fmtDate(){ const d=new Date(); return d.toLocaleString('es-ES',{dateStyle:'full',timeStyle:'short'}); }
+document.getElementById('today').textContent=fmtDate(); document.getElementById('qCount').textContent=quizData.questions.length;
+function esc(s){ return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;'); }
+function startQuiz(){ renderQuiz(); document.getElementById('quiz').style.display='block'; window.scrollTo({top:document.getElementById('quiz').offsetTop-10,behavior:'smooth'}); }
+function renderQuiz(){
+ const shell=document.getElementById('quiz');
+ shell.innerHTML=quizData.questions.map((q,idx)=>`
+  <article class="question-card" id="q-${idx}">
+   <div class="q-index">Pregunta ${idx+1} de ${quizData.questions.length} · ${esc(q.clause)}</div>
+   <div class="q-text">${esc(q.q)}</div>
+   <div class="options">${q.options.map((opt,optIdx)=>`
+    <label class="option" id="q-${idx}-opt-${optIdx}"><input type="radio" name="question-${idx}" onclick="answerQuestion(${idx},${optIdx})" ${state.answers[idx]===optIdx?'checked':''} /><span><strong>${String.fromCharCode(65+optIdx)}.</strong> ${esc(opt)}</span></label>`).join('')}</div>
+   <div class="feedback" id="feedback-${idx}"></div>
+  </article>`).join('') + `<div class="actions"><button class="btn-primary" onclick="finishQuiz()">Finalizar y calcular puntuación</button><button class="btn-secondary" onclick="resetQuiz()">Reiniciar este test</button></div>`;
+}
+function answerQuestion(idx,selected){
+ state.answers[idx]=selected; const q=quizData.questions[idx];
+ q.options.forEach((_,optIdx)=>{ const el=document.getElementById(`q-${idx}-opt-${optIdx}`); el.classList.remove('correct','wrong'); if(optIdx===q.correct) el.classList.add('correct'); if(optIdx===selected && selected!==q.correct) el.classList.add('wrong'); });
+ const ok=selected===q.correct; const fb=document.getElementById(`feedback-${idx}`); fb.className='feedback '+(ok?'ok':'bad');
+ const wrongReason = q.why_wrong[selected] || 'Tu opción no coincide con el sentido del requisito o guía aplicable.';
+ fb.innerHTML=`<h4>${ok?'✅ Respuesta correcta':'❌ Respuesta incorrecta'}</h4><p><strong>Tu elección:</strong> ${esc(q.options[selected])}</p>${ok?`<p><strong>Por qué es correcta:</strong> ${esc(q.why_correct)}</p>`:`<p><strong>Por qué tu respuesta es incorrecta:</strong> ${esc(wrongReason)}</p><p><strong>Por qué la correcta es la correcta:</strong> ${esc(q.why_correct)}</p>`}<div class="quote"><strong>Apoyo textual breve:</strong> “${esc(q.quote)}”.</div><p class="muted"><strong>Cláusula orientativa:</strong> ${esc(q.clause)}</p>`;
+ fb.style.display='block';
+}
+function finishQuiz(){
+ const pending=state.answers.map((v,i)=>v===null?i:null).filter(v=>v!==null); if(pending.length){ alert('Debes contestar todas las preguntas. Pendientes: '+pending.map(i=>i+1).join(', ')); document.getElementById(`q-${pending[0]}`).scrollIntoView({behavior:'smooth',block:'center'}); return; }
+ const user=document.getElementById('username').value.trim() || 'Invitado'; const total=quizData.questions.length; const hits=quizData.questions.filter((q,i)=>q.correct===state.answers[i]).length; const fails=total-hits; const pct=Math.round(hits/total*100);
+ document.getElementById('scorePct').textContent=pct+'%'; document.getElementById('scoreHits').textContent=hits; document.getElementById('scoreFails').textContent=fails; document.getElementById('reportUser').textContent=user; document.getElementById('reportDate').textContent=fmtDate();
+ document.getElementById('reportBody').innerHTML=quizData.questions.map((q,i)=>{ const sel=state.answers[i]; const ok=sel===q.correct; return `<tr><td>${i+1}</td><td>${esc(q.q)}<br><span class="muted">${esc(q.clause)}</span></td><td>${esc(q.options[sel])}</td><td>${esc(q.options[q.correct])}</td><td><span class="pill ${ok?'ok':'bad'}">${ok?'Correcta':'Incorrecta'}</span></td></tr>`; }).join('');
+ document.getElementById('report').style.display='block'; document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resetQuiz(){ state.answers=new Array(quizData.questions.length).fill(null); document.getElementById('report').style.display='none'; renderQuiz(); }
+</script>
+</body></html>

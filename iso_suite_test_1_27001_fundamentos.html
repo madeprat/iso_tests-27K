@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ISO Suite · Test 1 · ISO/IEC 27001 Fundamentos del SGSI</title>
+<style>
+:root{--bg:#0b1020;--panel:#141b34;--panel2:#1b2447;--text:#eef2ff;--muted:#b9c2e6;--ok:#1db954;--bad:#ff5d73;--accent:#6ea8fe;--accent2:#9b7bff;--border:#2a3567}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#0a0f1f,#101733 45%,#0d1430);color:var(--text)}
+.container{max-width:1100px;margin:0 auto;padding:24px}.hero{background:linear-gradient(135deg,rgba(110,168,254,.18),rgba(155,123,255,.16));border:1px solid var(--border);border-radius:22px;padding:24px 24px 18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 6px}.badge{background:#0f1733;border:1px solid var(--border);color:var(--muted);padding:8px 12px;border-radius:999px;font-size:13px}
+h1{margin:0 0 10px;font-size:32px;line-height:1.15}p.lead{margin:0;color:var(--muted);line-height:1.6}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:18px}
+.card{background:rgba(20,27,52,.92);border:1px solid var(--border);border-radius:18px;padding:18px}.card h2,.card h3{margin-top:0}label{display:block;font-weight:700;margin:10px 0 6px}
+input[type=text]{width:100%;padding:14px;border-radius:12px;border:1px solid var(--border);background:#0d1530;color:var(--text);font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+button{border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff}.btn-secondary{background:#202c57;color:var(--text);border:1px solid var(--border)}
+.notice{font-size:13px;color:var(--muted);line-height:1.5;background:#0d1530;border:1px dashed var(--border);padding:12px;border-radius:12px}.meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.quiz-shell{display:none;margin-top:22px}.question-card{background:rgba(20,27,52,.96);border:1px solid var(--border);border-radius:18px;padding:18px;margin-bottom:16px}.q-index{font-size:13px;color:var(--muted)}.q-text{font-size:20px;font-weight:800;line-height:1.4;margin:8px 0 14px}
+.options{display:grid;gap:10px}.option{border:1px solid var(--border);background:#0f1733;border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start;cursor:pointer;transition:.15s}.option:hover{transform:translateY(-1px);border-color:#4b62b0}.option input{margin-top:4px}
+.option.correct{border-color:rgba(29,185,84,.7);background:rgba(29,185,84,.12)}.option.wrong{border-color:rgba(255,93,115,.7);background:rgba(255,93,115,.12)}
+.feedback{display:none;margin-top:14px;padding:14px;border-radius:14px;border:1px solid var(--border);background:#111936}.feedback.ok{border-color:rgba(29,185,84,.45)}.feedback.bad{border-color:rgba(255,93,115,.45)}.feedback h4{margin:0 0 8px}
+.quote{font-style:italic;color:#d9e2ff;background:#0c132b;border-left:4px solid var(--accent);padding:10px 12px;border-radius:8px;margin:10px 0}.muted{color:var(--muted)}
+.scorebar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.metric{background:#0f1733;border:1px solid var(--border);border-radius:16px;padding:14px}.metric .value{font-size:28px;font-weight:900}.metric .label{color:var(--muted);font-size:13px}
+.report{display:none;margin-top:26px}.report table{width:100%;border-collapse:collapse;font-size:14px}.report th,.report td{border:1px solid var(--border);padding:10px;vertical-align:top}.report th{background:#121b39;text-align:left}
+.pill{display:inline-block;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}.pill.ok{background:rgba(29,185,84,.16);color:#93ffc0;border:1px solid rgba(29,185,84,.35)}.pill.bad{background:rgba(255,93,115,.14);color:#ffb2bc;border:1px solid rgba(255,93,115,.35)}
+.footer-note{margin-top:16px;color:var(--muted);font-size:13px;line-height:1.5}@media print{body{background:#fff;color:#000}.hero,.card,.question-card,.metric{box-shadow:none;background:#fff;color:#000;border:1px solid #bbb}.btn-primary,.btn-secondary,.actions,.notice{display:none!important}.report{display:block!important}.quiz-shell{display:none!important}}@media(max-width:860px){.grid{grid-template-columns:1fr}.scorebar{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+<div class="badges"><span class="badge">ISO/IEC 27001:2023</span><span class="badge">Nivel experto</span><span class="badge">7 preguntas</span></div>
+<h1>ISO Suite · Test 1 · ISO/IEC 27001 Fundamentos del SGSI</h1>
+<p class="lead">Nivel experto sobre contexto, liderazgo, riesgos, objetivos, Anexo A y Declaración de Aplicabilidad.</p>
+<div class="grid">
+<div class="card">
+<h2>Identificación del intento</h2>
+<label for="username">Usuario visible en el informe</label>
+<input id="username" type="text" maxlength="80" placeholder="Ej.: Ana López / Invitado 01" />
+<div class="actions">
+<button class="btn-primary" onclick="startQuiz()">Comenzar test</button>
+<button class="btn-secondary" onclick="window.print()">Imprimir informe</button>
+</div>
+<p class="footer-note">Esta página no almacena datos en base de datos, cookies ni localStorage. Todo se procesa en tu navegador para practicar y evidenciar el intento de conocimiento.</p>
+</div>
+<div class="card">
+<h3>Datos visibles</h3>
+<div class="meta"><div><strong>Fecha del intento:</strong> <span id="today"></span></div><div><strong>Preguntas:</strong> <span id="qCount"></span></div><div><strong>Nivel:</strong> Experto</div></div>
+<div class="notice" style="margin-top:12px"><strong>Diseño didáctico:</strong> cada pregunta muestra por qué la respuesta elegida es correcta o incorrecta y añade un apoyo textual breve de la norma correspondiente para reforzar la memorización.</div>
+</div>
+</div>
+</section>
+<section id="quiz" class="quiz-shell"></section>
+<section id="report" class="report card">
+<h2>Informe del intento</h2>
+<div class="scorebar">
+<div class="metric"><div class="value" id="scorePct">0%</div><div class="label">Puntuación</div></div>
+<div class="metric"><div class="value" id="scoreHits">0</div><div class="label">Aciertos</div></div>
+<div class="metric"><div class="value" id="scoreFails">0</div><div class="label">Errores</div></div>
+<div class="metric"><div class="value" id="reportUser">—</div><div class="label">Usuario</div></div>
+</div>
+<p class="muted"><strong>Fecha visible:</strong> <span id="reportDate"></span></p>
+<table><thead><tr><th>#</th><th>Pregunta</th><th>Respuesta del usuario</th><th>Respuesta correcta</th><th>Resultado</th></tr></thead><tbody id="reportBody"></tbody></table>
+<p class="footer-note">Sugerencia de estudio: repite el test concentrándote primero en las preguntas erradas y en el verbo normativo decisivo del extracto mostrado. Puedes reutilizar esta página tantas veces como quieras.</p>
+</section>
+</div>
+<script>
+const quizData = {"title": "ISO Suite · Test 1 · ISO/IEC 27001 Fundamentos del SGSI", "questions": [{"q": "Respecto a la conformidad con ISO/IEC 27001, ¿qué afirmación es la más exacta?", "options": ["La organización puede excluir requisitos de los capítulos 4 a 10 si compensa con más controles del Anexo A.", "No se acepta la exclusión de requisitos de los capítulos 4 a 10 cuando la organización reclama conformidad.", "Los capítulos 4 a 10 son orientativos y el Anexo A es lo verdaderamente obligatorio.", "Solo pueden excluirse los requisitos de liderazgo y operación si hay proveedores especializados."], "correct": 1, "clause": "1 y capítulos 4-10", "quote": "No se acepta la exclusión de cualquiera de los requisitos especificados en los capítulos 4 al 10 cuando la organización reclame la conformidad", "why_correct": "Es correcta porque la norma hace una distinción nítida: los requisitos de los capítulos 4 a 10 no son opcionales para declarar conformidad del SGSI.", "why_wrong": ["Es incorrecta porque más controles no compensan la exclusión de requisitos obligatorios del sistema de gestión.", "", "Es incorrecta porque invierte la lógica de la norma: el SGSI se fundamenta en los capítulos 4 a 10.", "Es incorrecta porque la norma no autoriza esa exclusión por externalización."]}, {"q": "En el análisis del contexto del SGSI, la organización debe:", "options": ["Limitarse a cuestiones tecnológicas, dejando fuera factores de negocio.", "Determinar cuestiones externas e internas pertinentes para su propósito y para los resultados previstos del SGSI.", "Centrarse solo en requisitos regulatorios.", "Actualizar el contexto únicamente al inicio del proyecto de certificación."], "correct": 1, "clause": "4.1", "quote": "La organización debe determinar las cuestiones externas e internas que son pertinentes para su propósito", "why_correct": "Es correcta porque el contexto del SGSI abarca factores internos y externos relevantes, no solo tecnología o cumplimiento legal.", "why_wrong": ["Es incorrecta porque el contexto del SGSI no se reduce a la tecnología.", "", "Es incorrecta porque la norma pide una visión más amplia que los requisitos regulatorios.", "Es incorrecta porque el contexto debe mantenerse pertinente, no congelado al inicio."]}, {"q": "Sobre las partes interesadas y el alcance del SGSI, la opción más sólida es:", "options": ["Basta con identificar clientes y excluir otras organizaciones relacionadas.", "La organización determina partes interesadas relevantes, sus requisitos relevantes y mantiene documentado el alcance.", "El alcance puede quedar tácito si el SoA está completo.", "Los requisitos de partes interesadas se documentan solo si aparecen en contratos."], "correct": 1, "clause": "4.2-4.3", "quote": "La organización debe determinar: a) las partes interesadas que son relevantes... b) los requisitos relevantes... El alcance debe estar disponible como información documentada", "why_correct": "Es correcta porque une los dos requisitos: identificar partes interesadas y requisitos relevantes, y mantener el alcance como información documentada.", "why_wrong": ["Es incorrecta porque reduce indebidamente el universo de partes interesadas.", "", "Es incorrecta porque el alcance documentado no se sustituye con el SoA.", "Es incorrecta porque los requisitos relevantes no se limitan a contratos."]}, {"q": "La alta dirección, conforme a ISO/IEC 27001, debe:", "options": ["Delegar por completo el SGSI al CISO y limitarse a aprobar el presupuesto.", "Demostrar liderazgo y compromiso, e integrar los requisitos del SGSI en los procesos de negocio.", "Intervenir solo en la revisión anual.", "Aprobar el Anexo A pero no la política de seguridad."], "correct": 1, "clause": "5.1", "quote": "La alta dirección debe demostrar liderazgo y compromiso", "why_correct": "Es correcta porque el liderazgo de la alta dirección implica implicación real en el SGSI y su integración en el negocio.", "why_wrong": ["Es incorrecta porque el liderazgo no se agota en delegar.", "", "Es incorrecta porque la participación de la alta dirección no es meramente anual.", "Es incorrecta porque la política también forma parte de sus responsabilidades."]}, {"q": "¿Qué exige la norma sobre la evaluación de riesgos de seguridad de la información?", "options": ["Un análisis genérico de TI sin referencia a confidencialidad, integridad y disponibilidad.", "Un proceso definido y aplicado que identifique riesgos asociados a la pérdida de confidencialidad, integridad y disponibilidad.", "Solo reevaluar riesgos cuando haya una no conformidad.", "Medir riesgos sin necesidad de criterios consistentes."], "correct": 1, "clause": "6.1.2", "quote": "La organización debe definir y aplicar un proceso de evaluación de los riesgos... identifique los riesgos asociados a la pérdida de confidencialidad, integridad y disponibilidad", "why_correct": "Es correcta porque resume el núcleo de 6.1.2: proceso definido, aplicado y centrado en riesgos sobre CIA.", "why_wrong": ["Es incorrecta porque la norma exige foco explícito en confidencialidad, integridad y disponibilidad.", "", "Es incorrecta porque la evaluación de riesgos no depende únicamente de no conformidades.", "Es incorrecta porque la consistencia del proceso es esencial para resultados válidos y comparables."]}, {"q": "El papel del Anexo A en el tratamiento de riesgos se entiende mejor así:", "options": ["Es una lista exhaustiva y única de controles permitidos.", "Sirve para comparar los controles seleccionados y comprobar que no se han omitido controles necesarios; además, no es exhaustivo.", "Es un anexo informativo que puede ignorarse si hay metodología propia.", "Sustituye a la evaluación de riesgos y al SoA."], "correct": 1, "clause": "6.1.3 / Anexo A", "quote": "comparar los controles determinados... con los del anexo A y comprobar que no se han omitido controles necesarios... no son exhaustivos", "why_correct": "Es correcta porque refleja dos matices clave: el Anexo A debe revisarse para evitar omisiones, pero puede requerirse controles adicionales.", "why_wrong": ["Es incorrecta porque la norma dice expresamente que los controles del Anexo A no son exhaustivos.", "", "Es incorrecta porque el Anexo A es normativo en este contexto y no debe ignorarse.", "Es incorrecta porque no reemplaza ni la evaluación de riesgos ni la Declaración de Aplicabilidad."]}, {"q": "La Declaración de Aplicabilidad debe contener, como mínimo:", "options": ["Solo los controles excluidos y el motivo.", "Los controles necesarios, la justificación de inclusiones, si están implementados o no, y la justificación de exclusiones del Anexo A.", "Únicamente la correspondencia con ISO/IEC 27002.", "Solo el listado de controles ya implantados."], "correct": 1, "clause": "6.1.3 d)", "quote": "elaborar una “Declaración de Aplicabilidad” que contenga: los controles necesarios... la justificación de las inclusiones... si... están implementados o no... y la justificación de las exclusiones", "why_correct": "Es correcta porque reproduce los elementos mínimos que exige la norma para el SoA.", "why_wrong": ["Es incorrecta porque el SoA no se limita a exclusiones.", "", "Es incorrecta porque la relación con 27002 no agota el contenido obligatorio.", "Es incorrecta porque también deben reflejarse controles necesarios no implementados aún y las justificaciones."]}]};
+const state = { answers: new Array(quizData.questions.length).fill(null) };
+function fmtDate(){ const d=new Date(); return d.toLocaleString('es-ES',{dateStyle:'full',timeStyle:'short'}); }
+document.getElementById('today').textContent=fmtDate(); document.getElementById('qCount').textContent=quizData.questions.length;
+function esc(s){ return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;'); }
+function startQuiz(){ renderQuiz(); document.getElementById('quiz').style.display='block'; window.scrollTo({top:document.getElementById('quiz').offsetTop-10,behavior:'smooth'}); }
+function renderQuiz(){
+ const shell=document.getElementById('quiz');
+ shell.innerHTML=quizData.questions.map((q,idx)=>`
+  <article class="question-card" id="q-${idx}">
+   <div class="q-index">Pregunta ${idx+1} de ${quizData.questions.length} · ${esc(q.clause)}</div>
+   <div class="q-text">${esc(q.q)}</div>
+   <div class="options">${q.options.map((opt,optIdx)=>`
+    <label class="option" id="q-${idx}-opt-${optIdx}"><input type="radio" name="question-${idx}" onclick="answerQuestion(${idx},${optIdx})" ${state.answers[idx]===optIdx?'checked':''} /><span><strong>${String.fromCharCode(65+optIdx)}.</strong> ${esc(opt)}</span></label>`).join('')}</div>
+   <div class="feedback" id="feedback-${idx}"></div>
+  </article>`).join('') + `<div class="actions"><button class="btn-primary" onclick="finishQuiz()">Finalizar y calcular puntuación</button><button class="btn-secondary" onclick="resetQuiz()">Reiniciar este test</button></div>`;
+}
+function answerQuestion(idx,selected){
+ state.answers[idx]=selected; const q=quizData.questions[idx];
+ q.options.forEach((_,optIdx)=>{ const el=document.getElementById(`q-${idx}-opt-${optIdx}`); el.classList.remove('correct','wrong'); if(optIdx===q.correct) el.classList.add('correct'); if(optIdx===selected && selected!==q.correct) el.classList.add('wrong'); });
+ const ok=selected===q.correct; const fb=document.getElementById(`feedback-${idx}`); fb.className='feedback '+(ok?'ok':'bad');
+ const wrongReason = q.why_wrong[selected] || 'Tu opción no coincide con el sentido del requisito o guía aplicable.';
+ fb.innerHTML=`<h4>${ok?'✅ Respuesta correcta':'❌ Respuesta incorrecta'}</h4><p><strong>Tu elección:</strong> ${esc(q.options[selected])}</p>${ok?`<p><strong>Por qué es correcta:</strong> ${esc(q.why_correct)}</p>`:`<p><strong>Por qué tu respuesta es incorrecta:</strong> ${esc(wrongReason)}</p><p><strong>Por qué la correcta es la correcta:</strong> ${esc(q.why_correct)}</p>`}<div class="quote"><strong>Apoyo textual breve:</strong> “${esc(q.quote)}”.</div><p class="muted"><strong>Cláusula orientativa:</strong> ${esc(q.clause)}</p>`;
+ fb.style.display='block';
+}
+function finishQuiz(){
+ const pending=state.answers.map((v,i)=>v===null?i:null).filter(v=>v!==null); if(pending.length){ alert('Debes contestar todas las preguntas. Pendientes: '+pending.map(i=>i+1).join(', ')); document.getElementById(`q-${pending[0]}`).scrollIntoView({behavior:'smooth',block:'center'}); return; }
+ const user=document.getElementById('username').value.trim() || 'Invitado'; const total=quizData.questions.length; const hits=quizData.questions.filter((q,i)=>q.correct===state.answers[i]).length; const fails=total-hits; const pct=Math.round(hits/total*100);
+ document.getElementById('scorePct').textContent=pct+'%'; document.getElementById('scoreHits').textContent=hits; document.getElementById('scoreFails').textContent=fails; document.getElementById('reportUser').textContent=user; document.getElementById('reportDate').textContent=fmtDate();
+ document.getElementById('reportBody').innerHTML=quizData.questions.map((q,i)=>{ const sel=state.answers[i]; const ok=sel===q.correct; return `<tr><td>${i+1}</td><td>${esc(q.q)}<br><span class="muted">${esc(q.clause)}</span></td><td>${esc(q.options[sel])}</td><td>${esc(q.options[q.correct])}</td><td><span class="pill ${ok?'ok':'bad'}">${ok?'Correcta':'Incorrecta'}</span></td></tr>`; }).join('');
+ document.getElementById('report').style.display='block'; document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resetQuiz(){ state.answers=new Array(quizData.questions.length).fill(null); document.getElementById('report').style.display='none'; renderQuiz(); }
+</script>
+</body></html>
